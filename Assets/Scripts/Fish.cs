@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Fish : MonoBehaviour {
-    public Transform startPosition;
-    public List<Transform> waypoints;
-    
+    public Map map { get; set; }
     private int waypointIndex;
     private float speed = 5f;
     private Vector3 currentPosition;
@@ -15,25 +13,25 @@ public class Fish : MonoBehaviour {
     private float health = 40;
 
     private void Start() {
-        transform.position = startPosition.position;
+        transform.position = map.StartPoint.position;
         isMoving = true;
-        transform.LookAt(waypoints[waypointIndex].position);
+        transform.LookAt(map.Waypoints[waypointIndex].position);
         materialFlash = GetComponent<MaterialFlash>();
     }
 
     private void Update() {
         if (!isMoving) return;
-        
+
         currentPosition = transform.position;
 
-        if (waypointIndex < waypoints.Count) {
+        if (waypointIndex < map.Waypoints.Count) {
             float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(currentPosition, waypoints[waypointIndex].position, step);
+            transform.position = Vector3.MoveTowards(currentPosition, map.Waypoints[waypointIndex].position, step);
 
-            if (Vector3.Distance(waypoints[waypointIndex].position, currentPosition) == 0f) {
+            if (Vector3.Distance(map.Waypoints[waypointIndex].position, currentPosition) == 0f) {
                 waypointIndex++;
-                if(waypointIndex < waypoints.Count)
-                    transform.LookAt(waypoints[waypointIndex].position);
+                if (waypointIndex < map.Waypoints.Count)
+                    transform.LookAt(map.Waypoints[waypointIndex].position);
             }
         }
         else {
@@ -49,12 +47,12 @@ public class Fish : MonoBehaviour {
     public void Attacked(float damage = 0) {
         materialFlash.Flash();
         health -= damage;
-        if (health <=- 0) {
+        if (health <= -0) {
             Death();
         }
     }
 
     private void Death() {
-        Invoke("Stop",0.5f);
+        Invoke("Stop", 0.5f);
     }
 }
