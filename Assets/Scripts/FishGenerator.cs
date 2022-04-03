@@ -6,6 +6,8 @@ using UnityEngine;
 public class FishGenerator : MonoBehaviour {
     [SerializeField]
     private Fish fishPrefab;
+    [SerializeField]
+    private Map map;
     private bool isPlaying;
     private float genTerm = 1f;
     private float elapsedTime;
@@ -29,6 +31,7 @@ public class FishGenerator : MonoBehaviour {
     private void CreateFish() {
         var newFish = Instantiate(fishPrefab, transform);
         newFish.gameObject.SetActive(true);
+        newFish.map = map;
         fishCount--;
         if (fishCount == 0) {
             isPlaying = false;
