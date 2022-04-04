@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
-    [SerializeField]
-    private FisherFactory fisherFactory;
+    public FisherFactory fisherFactory { get; set; }
     [SerializeField]
     private Material possible;
     [SerializeField]

@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class UIManager : SingletonMono<UIManager> {
     public enum UI {
-        LOBBY
+        LOBBY,
+        IN_GAME,
     }
 
     private Dictionary<UI, string> views = new Dictionary<UI, string>() {
-        {UI.LOBBY, "UI/Lobby"}
+        {UI.LOBBY, "UI/Lobby"},
+        {UI.IN_GAME, "UI/InGame"}
     };
 
     public GameObject LoadUI(UI uiEnum) {

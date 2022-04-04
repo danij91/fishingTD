@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Fish : MonoBehaviour {
+    public Action<int> OnFishDead { get; set; }
     public Map map { get; set; }
     private int waypointIndex;
     private float speed = 5f;
@@ -11,6 +12,7 @@ public class Fish : MonoBehaviour {
     private bool isMoving;
     private MaterialFlash materialFlash;
     private float health = 40;
+    private int score = 30;
 
     private void Start() {
         transform.position = map.StartPoint.position;
@@ -54,5 +56,6 @@ public class Fish : MonoBehaviour {
 
     private void Death() {
         Invoke("Stop", 0.5f);
+        OnFishDead?.Invoke(score);
     }
 }
