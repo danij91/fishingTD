@@ -2,8 +2,7 @@ using UnityEngine.SceneManagement;
 using UniRx;
 
 
-public class Presenter_InGame : Presenter
-{
+public class Presenter_InGame : Presenter {
     private Model_InGame modelInGame;
     private View_InGame viewInGame;
 
@@ -11,11 +10,15 @@ public class Presenter_InGame : Presenter
         this.modelInGame = modelInGame;
         this.viewInGame = viewInGame;
     }
-    
+
     public override void Initialize() {
         modelInGame.score.Subscribe(viewInGame.UpdateScore);
         viewInGame.buttonBack.onClick.AddListener(EndGame);
         modelInGame.Initialize();
+    }
+
+    public void AddScore(int score) {
+        modelInGame.score.Value += score;
     }
 
     private void EndGame() {
