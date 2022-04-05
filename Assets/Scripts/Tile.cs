@@ -12,21 +12,21 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     private Material impossible;
     private Material originalMaterial;
 
-    private Renderer renderer;
+    private Renderer tileRenderer;
 
     private bool isInstalled;
 
     private void Start() {
-        renderer = GetComponent<Renderer>();
-        originalMaterial = renderer.material;
+        tileRenderer = GetComponent<Renderer>();
+        originalMaterial = tileRenderer.material;
     }
 
     public void OnPointerDown(PointerEventData eventData) {
         if (isInstalled) {
-            renderer.material = impossible;
+            tileRenderer.material = impossible;
         }
         else {
-            renderer.material = possible;
+            tileRenderer.material = possible;
         }
     }
 
@@ -35,12 +35,13 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
             InstallFisher();
         }
 
-        renderer.material = originalMaterial;
+        tileRenderer.material = originalMaterial;
     }
 
     private void InstallFisher() {
         var newFisher = fisherFactory.CreateFisher();
         newFisher.transform.position = transform.position + Vector3.up ;
         newFisher.StartFishing();
+        isInstalled = true;
     }
 }
