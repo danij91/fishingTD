@@ -71,7 +71,7 @@ public class Fisher : MonoBehaviour {
         if (!targetFish) {
             return;
         }
-        SwingStick();
+        SwingStick().Forget();
         targetFish.Attacked(damage);
     }
 
