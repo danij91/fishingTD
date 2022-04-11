@@ -7,14 +7,19 @@ using UnityEngine;
 public class Fisher : MonoBehaviour {
     [SerializeField]
     private Transform stick;
-    private float range = 3f;
-    private float attackTerm = 2f;
+    [SerializeField]
+    private float damage;
+    [SerializeField]
+    private float range;
+    [SerializeField]
+    private float attackTerm;
+    
     private float elapsedTime;
     private bool isPlaying;
     private Fish targetFish;
     private Vector3 orgStickRotation;
     private float swingAngle = 60f;
-    private float damage = 10f;
+   
 
     private void Start() {
         orgStickRotation = stick.localEulerAngles;

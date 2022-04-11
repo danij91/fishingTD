@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2411079718361770056}
   - component: {fileID: 3926734665927258738}
   - component: {fileID: 4013869734650382231}
-  - component: {fileID: 2177921635970851943}
+  - component: {fileID: 7260439962500811787}
   m_Layer: 5
   m_Name: Button_Rare
   m_TagString: Untagged
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2177921635970851943
+--- !u!114 &7260439962500811787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 695517995274012916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98802e0278a5517468d0f8c3010a7236, type: 3}
+  m_Script: {fileID: 11500000, guid: ae3652746ceaee546a228cab511a7e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onBeginDrag:
@@ -140,6 +140,8 @@ MonoBehaviour:
   onEndDrag:
     m_PersistentCalls:
       m_Calls: []
+  shouldReset: 1
+  createdObjectPrefab: {fileID: 6663776186969136733, guid: 0c2be66c314665a44ba85921f468048b, type: 3}
 --- !u!1 &982978601656818261
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +154,7 @@ GameObject:
   - component: {fileID: 4354166051037932830}
   - component: {fileID: 1048644400578904132}
   - component: {fileID: 1502891712892342548}
-  - component: {fileID: 4069278725309840219}
+  - component: {fileID: 4799431411344584799}
   m_Layer: 5
   m_Name: Button_Unique
   m_TagString: Untagged
@@ -262,7 +264,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4069278725309840219
+--- !u!114 &4799431411344584799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271,7 +273,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 982978601656818261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98802e0278a5517468d0f8c3010a7236, type: 3}
+  m_Script: {fileID: 11500000, guid: ae3652746ceaee546a228cab511a7e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onBeginDrag:
@@ -280,6 +282,8 @@ MonoBehaviour:
   onEndDrag:
     m_PersistentCalls:
       m_Calls: []
+  shouldReset: 0
+  createdObjectPrefab: {fileID: 6663776186969136733, guid: 24ab152a280cb524992b0404daf22bf6, type: 3}
 --- !u!1 &1527258026954004059
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +296,7 @@ GameObject:
   - component: {fileID: 8869735519903823745}
   - component: {fileID: 1805129298128150976}
   - component: {fileID: 1931524400798511058}
-  - component: {fileID: 700496738303017156}
+  - component: {fileID: 8124342754303678138}
   m_Layer: 5
   m_Name: Button_Normal
   m_TagString: Untagged
@@ -402,7 +406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &700496738303017156
+--- !u!114 &8124342754303678138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411,7 +415,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1527258026954004059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98802e0278a5517468d0f8c3010a7236, type: 3}
+  m_Script: {fileID: 11500000, guid: ae3652746ceaee546a228cab511a7e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onBeginDrag:
@@ -420,6 +424,8 @@ MonoBehaviour:
   onEndDrag:
     m_PersistentCalls:
       m_Calls: []
+  shouldReset: 0
+  createdObjectPrefab: {fileID: 6663776186969136733, guid: 7a26d60c8c8d74b4da42e0294e787d28, type: 3}
 --- !u!1 &2049280955313421184
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +675,7 @@ GameObject:
   - component: {fileID: 4425558282746846813}
   - component: {fileID: 8616687873219837875}
   - component: {fileID: 5135065978428284623}
-  - component: {fileID: 2688944550542962028}
+  - component: {fileID: 8942898791625450517}
   m_Layer: 5
   m_Name: Button_Special
   m_TagString: Untagged
@@ -779,7 +785,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2688944550542962028
+--- !u!114 &8942898791625450517
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -788,7 +794,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4432544878826452378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98802e0278a5517468d0f8c3010a7236, type: 3}
+  m_Script: {fileID: 11500000, guid: ae3652746ceaee546a228cab511a7e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onBeginDrag:
@@ -797,6 +803,8 @@ MonoBehaviour:
   onEndDrag:
     m_PersistentCalls:
       m_Calls: []
+  shouldReset: 0
+  createdObjectPrefab: {fileID: 6663776186969136733, guid: 2979edb201dacbd4ea2ee729fc39e924, type: 3}
 --- !u!1 &4757694130230506994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,10 +1125,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mButtonBack: {fileID: 6014264260330141402}
   mFisherButtons:
-  - {fileID: 700496738303017156}
-  - {fileID: 2177921635970851943}
-  - {fileID: 2688944550542962028}
-  - {fileID: 4069278725309840219}
+  - {fileID: 8124342754303678138}
+  - {fileID: 7260439962500811787}
+  - {fileID: 8942898791625450517}
+  - {fileID: 4799431411344584799}
   m_labelScore: {fileID: 6014264260920599250}
 --- !u!1 &6014264260732290003
 GameObject:
