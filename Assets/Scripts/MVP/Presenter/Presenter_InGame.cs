@@ -38,10 +38,8 @@ public class Presenter_InGame : Presenter {
     }
 
     private void BeginDrag(int index) {
-        Debug.Log(index + " begin drag");
     }
 
     private void EndDrag(int index) {
-        Debug.Log(index + " end drag");
     }
 }

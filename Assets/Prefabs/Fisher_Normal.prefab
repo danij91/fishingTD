@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6663776186969136720}
   - component: {fileID: -3789723010449660468}
   m_Layer: 0
-  m_Name: Fisher
+  m_Name: Fisher_Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,6 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stick: {fileID: 6607672222388110}
+  damage: 5
+  range: 5
+  attackTerm: 1
 --- !u!65 &6663776186969136720
 BoxCollider:
   m_ObjectHideFlags: 0

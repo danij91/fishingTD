@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6663776186969136720}
   - component: {fileID: -3789723010449660468}
   m_Layer: 0
-  m_Name: Fisher
+  m_Name: Fisher_Special
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,6 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stick: {fileID: 6607672222388110}
+  damage: 40
+  range: 3
+  attackTerm: 2
 --- !u!65 &6663776186969136720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -171,7 +174,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3b13a147ba5afec42bf8598021c26643, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -266,7 +269,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3b13a147ba5afec42bf8598021c26643, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
